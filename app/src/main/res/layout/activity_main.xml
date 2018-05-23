@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shra1.scrollzzdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:id="@+id/tableTopLeft"
+            android:layout_width="@dimen/cell_width"
+            android:layout_height="@dimen/cell_height" />
+
+        <com.shra1.scrollzzdemo.customviews.MyHorizontalScrollView
+            android:id="@+id/topHorizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableTopHeadings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height" />
+
+        </com.shra1.scrollzzdemo.customviews.MyHorizontalScrollView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/midMainVerticalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TableLayout
+                android:id="@+id/tableHeadingColumns"
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="match_parent" />
+
+            <com.shra1.scrollzzdemo.customviews.MyHorizontalScrollView
+                android:id="@+id/midCommonHorizontalScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TableLayout
+                    android:id="@+id/tableXYScrollableContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.shra1.scrollzzdemo.customviews.MyHorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
